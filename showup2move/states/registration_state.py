@@ -99,7 +99,7 @@ class RegistrationState(rx.State):
 
     @rx.var
     def step_one_valid(self) -> bool:
-        return (self.name.strip() != "") & (self.email.strip() != "")
+        return (self.name.strip() != "") or (self.email.strip() != "")
 
     @rx.var
     def any_sport_selected(self) -> bool:
